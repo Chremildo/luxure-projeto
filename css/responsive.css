@@ -1,0 +1,66 @@
+/* =======================================
+RESPONSIVE SYSTEM
+======================================= */
+@media (max-width: 1040px) {
+  .nav__toggle { display: inline-grid; }
+  .nav__menu {
+    position: fixed;
+    inset: 78px 16px auto;
+    display: none;
+    margin: 0;
+    padding: 18px;
+    border: 1px solid var(--line);
+    background: var(--charcoal);
+    box-shadow: var(--shadow);
+  }
+  .nav__menu.is-open { display: grid; }
+  .nav__actions .button { display: none; }
+  .hero__content, .showcase__layout, .about__layout, .developer__layout, .brazil__layout, .insights__layout, .faq__layout, .contact__layout, .mobile-install__layout { grid-template-columns: 1fr; }
+  .hero__stats, .trust__grid, .property-grid, .agent-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid, .stay-grid, .guide-grid, .legal-notes { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero__stats { position: relative; left: auto; bottom: auto; transform: none; margin-top: 48px; }
+}
+
+@media (max-width: 700px) {
+  .section { padding: 70px 0; }
+  .nav { min-height: 68px; }
+  .brand span:last-child { display: none; }
+  .language-select select { width: 58px; }
+  .hero { padding-top: 100px; }
+  .hero__content { gap: 28px; }
+  .hero__buttons, .showcase__actions, .developer__actions, .brazil__actions, .newsletter__inner, .newsletter__form { flex-direction: column; align-items: stretch; }
+  .hero__stats, .trust__grid, .property-grid, .agent-grid, .service-grid, .stay-grid, .guide-grid, .details-list, .mission-grid, .rio-grid, .footer__grid, .legal-notes { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .process-grid article { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }
+  .hero__stats div { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 0; }
+  .showcase__gallery, .showcase__gallery img { min-height: 340px; height: 340px; }
+  .developer__portrait, .developer__portrait img { min-height: 500px; height: 500px; }
+  .developer__credentials article { grid-template-columns: 1fr; gap: 6px; }
+  .brazil__media, .brazil__media img { min-height: 360px; height: 360px; }
+  .timeline li, .chart-row, .testimonial-card { grid-template-columns: 1fr; }
+  .testimonial-shell { grid-template-columns: 1fr; }
+  .testimonial-shell .carousel__button { justify-self: center; }
+  .contact iframe { min-height: 180px; }
+  .phone-preview img { min-height: 440px; max-height: 560px; }
+  .phone-preview figcaption { left: 14px; right: 14px; bottom: 14px; }
+  .ai-chat {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+  .ai-chat__toggle {
+    margin-left: auto;
+    display: flex;
+  }
+  .ai-chat__panel {
+    right: 0;
+    left: 0;
+    width: 100%;
+    bottom: 64px;
+  }
+  .ai-chat__messages { max-height: 58vh; }
+  .ai-chat__form { grid-template-columns: 1fr; }
+  .floating-contact { bottom: 82px; }
+  .back-to-top { bottom: 134px; }
+}

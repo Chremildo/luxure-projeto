@@ -1,0 +1,28 @@
+{
+  "name": "James Lennan Estates",
+  "short_name": "James Estates",
+  "description": "Brazil rentals, short stays, transport tips, payments, tours, and James Lennan AI guidance.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/james-lennan-app-icon.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/james-lennan-profile-portrait.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "James Lennan Estates mobile preview"
+    }
+  ]
+}

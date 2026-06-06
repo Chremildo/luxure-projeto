@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="James Lennan Estates helps clients explore Brazil rentals, São Paulo homes, Rio de Janeiro stays, tourist tours, and multilingual real estate guidance.">
+  <meta name="keywords" content="James Lennan, Brazil real estate, São Paulo rentals, Rio de Janeiro stays, Airbnb style rentals, multilingual real estate">
+  <meta name="author" content="James Lennan">
+  <meta property="og:title" content="James Lennan Estates | Brazil Real Estate and Stays">
+  <meta property="og:description" content="A premium real estate experience for distinctive homes and high-value property investments.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="James Estates">
+  <title>James Lennan Estates | Brazil Real Estate and Stays</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/images/james-lennan-app-icon.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="loader" data-loader aria-live="polite">
+    <div class="loader__mark">LE</div>
+    <p data-i18n="loader">Preparing private listings</p>
+  </div>
+
+  <!-- ===================================== -->
+  <!-- STICKY NAVIGATION -->
+  <!-- Transparent premium navigation -->
+  <!-- ===================================== -->
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#hero" aria-label="James Lennan Estates home">
+        <span class="brand__mark">LE</span>
+        <span>James Lennan Estates</span>
+      </a>
+      <button class="nav__toggle icon-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__menu" id="primary-menu" data-menu>
+        <a href="#properties" data-i18n="nav.properties">Properties</a>
+        <a href="#showcase" data-i18n="nav.showcase">Showcase</a>
+        <a href="#developer" data-i18n="nav.developer">Developer</a>
+        <a href="#brazil" data-i18n="nav.brazil">Brazil</a>
+        <a href="#local-guide" data-i18n="nav.guide">Guide</a>
+        <a href="#insights" data-i18n="nav.insights">Insights</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <label class="language-select" aria-label="Select website language">
+          <span class="sr-only">Language</span>
+          <select data-language-select>
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+            <option value="es">ES</option>
+          </select>
+        </label>
+        <button class="icon-button" type="button" data-open-search aria-label="Open search">⌕</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <span data-theme-label>Dark</span>
+        </button>
+        <a class="button button--gold" href="#contact" data-i18n="nav.cta">Private Consultation</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================================== -->
+    <!-- HERO SECTION -->
+    <!-- Main Property Showcase -->
+    <!-- ===================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <div class="hero__copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Built by James Lennan</p>
+          <h1 id="hero-title" data-i18n="hero.title">A smarter way to explore homes in Brazil.</h1>
+          <p data-i18n="hero.copy">James Lennan built this real estate and travel platform for clients looking for rentals, short stays, Rio tours, São Paulo homes, and multilingual guidance in one polished place.</p>
+          <div class="hero__buttons">
+            <a class="button button--gold" href="#properties" data-i18n="hero.explore">Explore Listings</a>
+            <button class="button button--glass" type="button" data-modal-target="showcase-modal" data-i18n="hero.signature">View Signature Estate</button>
+          </div>
+        </div>
+
+        <aside class="search-card glass reveal" aria-label="Property search">
+          <p class="search-card__title" data-i18n="search.title">Find your next address</p>
+          <form class="search-form" data-search-form>
+            <label>
+              <span data-i18n="search.location">Location</span>
+              <input name="location" type="search" placeholder="Rio de Janeiro, São Paulo, Penha" data-i18n-placeholder="search.locationPlaceholder">
+            </label>
+            <label>
+              <span data-i18n="search.budget">Budget</span>
+              <select name="budget">
+                <option value="" data-i18n="search.anyBudget">Any budget</option>
+                <option value="5000">R$5K+</option>
+                <option value="10000">R$10K+</option>
+                <option value="20000">R$20K+</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="search.collection">Collection</span>
+              <select name="category">
+                <option value="all" data-i18n="search.allCollections">All collections</option>
+                <option value="buy" data-i18n="search.buy">Buy</option>
+                <option value="rent" data-i18n="search.rent">Rent</option>
+                <option value="luxury" data-i18n="search.luxury">Luxury</option>
+                <option value="waterfront" data-i18n="search.waterfront">Waterfront</option>
+                <option value="investment" data-i18n="search.investment">Investment</option>
+                <option value="brazil" data-i18n="search.brazil">Brazil</option>
+              </select>
+            </label>
+            <button class="button button--gold button--wide" type="submit" data-i18n="search.submit">Search Portfolio</button>
+          </form>
+        </aside>
+      </div>
+      <div class="hero__stats container" aria-label="Company performance statistics">
+        <div><strong data-counter="48">0</strong><span data-i18n="stats.stays">Curated Stays</span></div>
+        <div><strong data-counter="96">0</strong><span data-i18n="stats.satisfaction">Client Satisfaction</span></div>
+        <div><strong data-counter="4">0</strong><span data-i18n="stats.years">Years Building</span></div>
+        <div><strong data-counter="3">0</strong><span data-i18n="stats.languages">Languages</span></div>
+      </div>
+      <a class="scroll-indicator" href="#trust" aria-label="Scroll to trust indicators"></a>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- TRUST INDICATORS -->
+    <!-- Animated credibility metrics -->
+    <!-- ===================================== -->
+    <section class="trust section" id="trust" aria-labelledby="trust-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow">Realistic project metrics</p>
+        <h2 id="trust-title">A focused platform for rentals, tours, and client support.</h2>
+      </div>
+      <div class="container trust__grid">
+        <article class="metric reveal"><strong data-counter="34">0</strong><span>Brazil rental examples</span></article>
+        <article class="metric reveal"><strong data-counter="120">0</strong><span>Tour and stay inquiries planned</span></article>
+        <article class="metric reveal"><strong data-counter="8">0</strong><span>Featured neighborhoods</span></article>
+        <article class="metric reveal"><strong data-counter="2">0</strong><span>Main cities: São Paulo and Rio</span></article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- HOW IT WORKS -->
+    <!-- Simple client booking flow -->
+    <!-- ===================================== -->
+    <section class="how-it-works" aria-labelledby="process-title">
+      <div class="container process-grid">
+        <div>
+          <p class="eyebrow" data-i18n="process.eyebrow">How it works</p>
+          <h2 id="process-title" data-i18n="process.title">Simple steps before you book.</h2>
+        </div>
+        <article>
+          <span>01</span>
+          <h3 data-i18n="process.oneTitle">Choose Area</h3>
+          <p data-i18n="process.oneCopy">Tell James the city, neighborhood, dates, budget, and number of guests.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3 data-i18n="process.twoTitle">Compare Options</h3>
+          <p data-i18n="process.twoCopy">Review rentals, short stays, transport, payment method, and building details.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-i18n="process.threeTitle">Confirm Safely</h3>
+          <p data-i18n="process.threeCopy">Use WhatsApp to confirm details, documents, deposit, check-in, and next steps.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- FEATURED PROPERTIES -->
+    <!-- Dynamic cards and filters -->
+    <!-- ===================================== -->
+    <section class="section properties" id="properties" aria-labelledby="properties-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow" data-i18n="properties.eyebrow">Curated portfolio</p>
+        <h2 id="properties-title" data-i18n="properties.title">Featured Properties</h2>
+        <p data-i18n="properties.copy">Each residence is selected for practical stay planning, neighborhood fit, and client needs.</p>
+      </div>
+      <aside class="container listing-note reveal" aria-label="Listing disclaimer">
+        <strong data-i18n="properties.noteStrong">Important:</strong> <span data-i18n="properties.note">listings, photos, prices, nightly rates, availability, and features are examples for presentation and client planning. Always confirm details with James before paying or booking.</span>
+      </aside>
+      <div class="container filter-bar reveal" role="list" aria-label="Property filters">
+        <button class="filter-chip is-active" data-filter="all" type="button" data-i18n="filters.all">All</button>
+        <button class="filter-chip" data-filter="buy" type="button" data-i18n="filters.buy">Buy</button>
+        <button class="filter-chip" data-filter="rent" type="button" data-i18n="filters.rent">Rent</button>
+        <button class="filter-chip" data-filter="luxury" type="button" data-i18n="filters.luxury">Luxury</button>
+        <button class="filter-chip" data-filter="commercial" type="button" data-i18n="filters.commercial">Commercial</button>
+        <button class="filter-chip" data-filter="waterfront" type="button" data-i18n="filters.waterfront">Waterfront</button>
+        <button class="filter-chip" data-filter="investment" type="button" data-i18n="filters.investment">Investment</button>
+        <button class="filter-chip" data-filter="brazil" type="button" data-i18n="filters.brazil">Brazil</button>
+      </div>
+      <div class="container property-grid" data-property-grid aria-live="polite"></div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- INTERACTIVE PROPERTY SHOWCASE -->
+    <!-- Carousel and modal tour -->
+    <!-- ===================================== -->
+    <section class="section showcase" id="showcase" aria-labelledby="showcase-title">
+      <div class="container showcase__layout">
+        <div class="showcase__gallery reveal" data-carousel>
+          <button class="carousel__button carousel__button--prev" type="button" data-carousel-prev aria-label="Previous image">‹</button>
+          <img data-carousel-image src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85" alt="Modern hillside estate with pool" loading="lazy">
+          <button class="carousel__button carousel__button--next" type="button" data-carousel-next aria-label="Next image">›</button>
+        </div>
+        <div class="showcase__content reveal">
+          <p class="eyebrow">Signature estate</p>
+          <h2 id="showcase-title">The Aurelia Residence</h2>
+          <p>A sculptural seven-bedroom sanctuary above the Pacific, designed for privacy, entertaining, and rare west-facing views.</p>
+          <dl class="details-list">
+            <div><dt>Guide Price</dt><dd>$22,800,000</dd></div>
+            <div><dt>Interior</dt><dd>12,400 sq ft</dd></div>
+            <div><dt>Grounds</dt><dd>3.6 acres</dd></div>
+            <div><dt>Access</dt><dd>Gated private road</dd></div>
+          </dl>
+          <div class="showcase__actions">
+            <button class="button button--gold" type="button" data-modal-target="showcase-modal">Open Gallery</button>
+            <a class="button button--outline" href="#contact">Request Virtual Tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- ABOUT SECTION -->
+    <!-- Story, mission, vision, achievements -->
+    <!-- ===================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__layout">
+        <div class="reveal">
+          <p class="eyebrow">The firm</p>
+          <h2 id="about-title">Built for complex, high-value decisions.</h2>
+          <p>We advise clients through acquisition, disposition, leasing, and portfolio strategy with the precision of an investment office and the taste of a luxury editorial studio.</p>
+          <div class="mission-grid">
+            <article><h3>Mission</h3><p>Protect client discretion while creating decisive market advantage.</p></article>
+            <article><h3>Vision</h3><p>Make exceptional real estate feel calmer, clearer, and more intelligent.</p></article>
+          </div>
+        </div>
+        <ol class="timeline reveal" aria-label="Company achievements timeline">
+          <li><span>2002</span>Founded as a private advisory boutique.</li>
+          <li><span>2012</span>Opened coastal and urban luxury divisions.</li>
+          <li><span>2019</span>Launched proprietary buyer-intent analytics.</li>
+          <li><span>2026</span>Representing premier assets across 42 cities.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- AGENT SHOWCASE -->
+    <!-- Luxury advisor cards -->
+    <!-- ===================================== -->
+    <section class="section agents" id="agents" aria-labelledby="agents-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow">Private client advisors</p>
+        <h2 id="agents-title">Senior Representation</h2>
+      </div>
+      <div class="container agent-grid">
+        <article class="agent-card reveal">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85" alt="Portrait of advisor Celeste Morgan" loading="lazy">
+          <div><h3>Celeste Morgan</h3><p>Managing Partner</p><span aria-label="Rating 5 out of 5">★★★★★</span></div>
+          <button class="button button--outline" type="button" data-contact-agent="Celeste Morgan">Contact</button>
+        </article>
+        <article class="agent-card reveal">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85" alt="Portrait of advisor Julian Mercer" loading="lazy">
+          <div><h3>Julian Mercer</h3><p>Investment Director</p><span aria-label="Rating 5 out of 5">★★★★★</span></div>
+          <button class="button button--outline" type="button" data-contact-agent="Julian Mercer">Contact</button>
+        </article>
+        <article class="agent-card reveal">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85" alt="Portrait of advisor Amara Vale" loading="lazy">
+          <div><h3>Amara Vale</h3><p>Waterfront Specialist</p><span aria-label="Rating 5 out of 5">★★★★★</span></div>
+          <button class="button button--outline" type="button" data-contact-agent="Amara Vale">Contact</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- DEVELOPER AND AUTHOR SECTION -->
+    <!-- Main creator profile -->
+    <!-- ===================================== -->
+    <section class="section developer" id="developer" aria-labelledby="developer-title">
+      <div class="container developer__layout">
+        <div class="developer__portrait reveal">
+          <img src="assets/images/james-lennan-profile-portrait.jpeg" alt="James Lennan, developer and creator of the James Lennan Estates app" loading="lazy">
+        </div>
+        <div class="developer__content reveal">
+          <p class="eyebrow">App developer and founder</p>
+          <h2 id="developer-title">Designed and developed by James Lennan.</h2>
+          <p>James Lennan created this luxury real estate experience to combine premium property presentation, Brazil travel support, multilingual guidance, and fast AI-style client assistance in one polished website.</p>
+          <div class="developer__credentials" aria-label="Developer project details">
+            <article>
+              <strong>Role</strong>
+              <span>Frontend Developer, Product Designer, Real Estate Experience Builder</span>
+            </article>
+            <article>
+              <strong>Focus</strong>
+              <span>Luxury UI, AI concierge flows, Brazil rental guidance, responsive web apps</span>
+            </article>
+            <article>
+              <strong>Contact</strong>
+              <span>Instagram @jameslennan · WhatsApp +55 44 99884-3639</span>
+            </article>
+          </div>
+          <div class="developer__actions">
+            <a class="button button--gold" href="https://wa.me/5544998843639" target="_blank" rel="noopener">Contact James</a>
+            <a class="button button--outline" href="https://www.instagram.com/jameslennan" target="_blank" rel="noopener">View Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SERVICES SECTION -->
+    <!-- Advisory capabilities -->
+    <!-- ===================================== -->
+    <section class="section services" aria-labelledby="services-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">End-to-end real estate counsel.</h2>
+      </div>
+      <div class="container service-grid">
+        <article class="service-card reveal"><span>01</span><h3>Buying</h3><p>Quiet access, pricing intelligence, and negotiation strategy.</p></article>
+        <article class="service-card reveal"><span>02</span><h3>Selling</h3><p>Editorial campaigns, qualified buyer targeting, and offer control.</p></article>
+        <article class="service-card reveal"><span>03</span><h3>Investment</h3><p>Yield modeling, neighborhood thesis, and exit planning.</p></article>
+        <article class="service-card reveal"><span>04</span><h3>Rentals</h3><p>Fully vetted residences for seasonal and long-term occupancy.</p></article>
+        <article class="service-card reveal"><span>05</span><h3>Management</h3><p>Stewardship, staffing, maintenance, and owner reporting.</p></article>
+        <article class="service-card reveal"><span>06</span><h3>Rio Concierge</h3><p>Rental guidance, neighborhood matching, and curated tourist experiences in Rio de Janeiro.</p></article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- BRAZIL AND RIO ADVISORY -->
+    <!-- Rentals, tourism, and local guidance -->
+    <!-- ===================================== -->
+    <section class="section brazil" id="brazil" aria-labelledby="brazil-title">
+      <div class="container brazil__layout">
+        <div class="brazil__media reveal">
+          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1400&q=85" alt="Rio de Janeiro coastline with mountains and beach" loading="lazy">
+          <div class="brazil__badge glass">
+            <strong>Rio Desk</strong>
+            <span>Rentals, relocation, tours</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Brazil collection</p>
+          <h2 id="brazil-title">Rio de Janeiro, handled like a private arrival.</h2>
+          <p>For clients exploring Brazil, James Lennan Estates adds neighborhood advice, short-term rental support, bilingual guidance, and curated tourist itineraries across Rio de Janeiro.</p>
+          <div class="rio-grid" aria-label="Rio de Janeiro advisory options">
+            <article>
+              <span>01</span>
+              <h3>Rent Smarter</h3>
+              <p>Compare Ipanema, Leblon, Copacabana, Barra, and Jardim Oceanico by beach access, nightlife, family comfort, and commute.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Tour Planning</h3>
+              <p>Build polished itineraries for Christ the Redeemer, Sugarloaf, Santa Teresa, boat days, galleries, and private dining.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Local Tips</h3>
+              <p>Get arrival notes for transport, building security, seasonal pricing, beach etiquette, and reliable service providers.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Investor View</h3>
+              <p>Review furnished rental demand, event-season premiums, property management needs, and resale considerations.</p>
+            </article>
+          </div>
+          <div class="brazil__actions">
+            <button class="button button--gold" type="button" data-chat-prompt="I want help renting a luxury apartment in Rio de Janeiro.">Ask James Lennan AI</button>
+            <button class="button button--outline" type="button" data-filter-jump="brazil">See Brazil Listings</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- CLIENT LOCAL GUIDE -->
+    <!-- Neighborhoods, transport, payments, and rental resources -->
+    <!-- ===================================== -->
+    <section class="section local-guide" id="local-guide" aria-labelledby="local-guide-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow" data-i18n="guide.eyebrow">Client local guide</p>
+        <h2 id="local-guide-title" data-i18n="guide.title">Everything a renter or tourist needs before arriving.</h2>
+        <p data-i18n="guide.copy">Practical guidance for clients comparing neighborhoods, transport, payment options, phone contact, and other rental platforms across São Paulo and Rio de Janeiro.</p>
+      </div>
+      <div class="container guide-grid" data-guide-panels>
+        <article class="guide-card reveal">
+          <button class="guide-card__toggle" type="button" data-guide-toggle aria-expanded="false" aria-controls="guide-neighborhoods">
+            <span data-i18n="guide.neighborhoods">Neighborhoods</span>
+            <strong data-i18n="guide.neighborhoodsTitle">Rio and São Paulo areas</strong>
+          </button>
+          <div id="guide-neighborhoods" hidden>
+            <ul>
+              <li>Penha: practical local living, access to Zona Norte, better value.</li>
+              <li>Campo Grande: larger homes, family stays, car-friendly routines.</li>
+              <li>Tijuca: metro access, traditional Rio neighborhood, strong services.</li>
+              <li>Botafogo: tourist base with metro, restaurants, and Sugarloaf access.</li>
+              <li>Barra: modern condos, beach lifestyle, better for longer stays.</li>
+              <li>Jardins, Moema, Pinheiros, Vila Mariana: São Paulo options for work, families, and city life.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="guide-card reveal">
+          <button class="guide-card__toggle" type="button" data-guide-toggle aria-expanded="false" aria-controls="guide-transport">
+            <span data-i18n="guide.transport">Transport</span>
+            <strong data-i18n="guide.transportTitle">How clients move around</strong>
+          </button>
+          <div id="guide-transport" hidden>
+            <ul>
+              <li>Uber and 99 for most airport, beach, business, and nightlife trips.</li>
+              <li>Moto rides for short routes when traffic is heavy, when suitable for the client.</li>
+              <li>Bus, metro, and train for budget-friendly local travel.</li>
+              <li>Rental car for Barra, Campo Grande, beach houses, and family schedules.</li>
+              <li>Private driver can be arranged for airport arrival, tours, and late-night returns.</li>
+            </ul>
+            <div class="guide-links" aria-label="Transport app links">
+              <a href="https://www.uber.com/br/pt-br/ride/" target="_blank" rel="noopener">Uber</a>
+              <a href="https://99app.com/passageiro/" target="_blank" rel="noopener">99 / 99Moto</a>
+              <a href="https://moovitapp.com/index/pt-br/transporte_p%C3%BAblico-Rio_de_Janeiro-322" target="_blank" rel="noopener">Bus + Metro Rio</a>
+              <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a>
+            </div>
+          </div>
+        </article>
+        <article class="guide-card reveal">
+          <button class="guide-card__toggle" type="button" data-guide-toggle aria-expanded="false" aria-controls="guide-payment">
+            <span data-i18n="guide.payment">Payment</span>
+            <strong data-i18n="guide.paymentTitle">Common Brazil payment options</strong>
+          </button>
+          <div id="guide-payment" hidden>
+            <ul>
+              <li data-i18n="guide.paymentPix">Pix for fast local transfers and deposits.</li>
+              <li data-i18n="guide.paymentCard">Credit or debit card for tourists and platform bookings.</li>
+              <li data-i18n="guide.paymentPaypal">PayPal for some international clients when available.</li>
+              <li data-i18n="guide.paymentStripe">Stripe checkout for card, Apple Pay, and Google Pay style payments when connected.</li>
+              <li data-i18n="guide.paymentBoleto">Boleto for some formal rental or service payments.</li>
+              <li data-i18n="guide.paymentTransfer">International card or transfer can be discussed before arrival.</li>
+              <li data-i18n="guide.paymentConfirm">Always confirm deposit, cancellation, cleaning fee, and ID requirements.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="guide-card reveal">
+          <button class="guide-card__toggle" type="button" data-guide-toggle aria-expanded="false" aria-controls="guide-contact">
+            <span data-i18n="guide.contact">Contact</span>
+            <strong data-i18n="guide.contactTitle">Phone and support</strong>
+          </button>
+          <div id="guide-contact" hidden>
+            <ul>
+              <li>WhatsApp is the fastest way to speak with James.</li>
+              <li>Mobile phone call is available for urgent arrival questions.</li>
+              <li>English, Portuguese, and Spanish support for visitors.</li>
+              <li>Ask for check-in instructions, building rules, Wi-Fi, and transport tips before paying.</li>
+            </ul>
+            <a class="button button--gold" href="https://wa.me/5544998843639" target="_blank" rel="noopener" data-i18n="guide.messageJames">Message James</a>
+          </div>
+        </article>
+      </div>
+      <div class="container rental-links reveal" aria-label="Other rental resources">
+        <h3 data-i18n="guide.resources">Other rental resources clients may compare</h3>
+        <a href="https://www.airbnb.com.br/" target="_blank" rel="noopener">Airbnb Brazil</a>
+        <a href="https://www.quintoandar.com.br/" target="_blank" rel="noopener">QuintoAndar</a>
+        <a href="https://www.zapimoveis.com.br/" target="_blank" rel="noopener">ZAP Imóveis</a>
+        <a href="https://imobiliariasinai.com.br/" target="_blank" rel="noopener">Imobiliária Sinai RJ</a>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- MARKET INSIGHTS -->
+    <!-- Charts and statistics -->
+    <!-- ===================================== -->
+    <section class="section insights" id="insights" aria-labelledby="insights-title">
+      <div class="container insights__layout">
+        <div class="reveal">
+          <p class="eyebrow">Market intelligence</p>
+          <h2 id="insights-title">Where luxury demand is moving.</h2>
+          <p>Our analytics dashboard combines transaction velocity, inventory depth, migration trends, and private buyer intent.</p>
+        </div>
+        <div class="chart-panel glass reveal" aria-label="Market growth chart">
+          <div class="chart-row"><span>Waterfront</span><i style="--bar: 92%"></i><strong>+18%</strong></div>
+          <div class="chart-row"><span>Rio Short Stay</span><i style="--bar: 82%"></i><strong>+14%</strong></div>
+          <div class="chart-row"><span>Urban Penthouse</span><i style="--bar: 74%"></i><strong>+11%</strong></div>
+          <div class="chart-row"><span>Commercial</span><i style="--bar: 54%"></i><strong>+6%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- TESTIMONIALS -->
+    <!-- Client carousel -->
+    <!-- ===================================== -->
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow">Client confidence</p>
+        <h2 id="testimonials-title">Quietly recommended.</h2>
+      </div>
+      <div class="container testimonial-shell reveal" data-testimonials>
+        <button class="carousel__button carousel__button--prev" type="button" data-testimonial-prev aria-label="Previous testimonial">‹</button>
+        <article class="testimonial-card" data-testimonial-card></article>
+        <button class="carousel__button carousel__button--next" type="button" data-testimonial-next aria-label="Next testimonial">›</button>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- FAQ SECTION -->
+    <!-- Accessible accordion -->
+    <!-- ===================================== -->
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="container faq__layout">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 id="faq-title" data-i18n="faq.title">Practical answers before you book or travel.</h2>
+        </div>
+        <div class="accordion reveal" data-accordion>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q1">What should I check before renting a place in Brazil?</button>
+            <div hidden data-i18n="faq.a1">Check the exact address, recent photos or video, Wi-Fi, air conditioning, building security, guest limit, cleaning fee, deposit, cancellation rules, and whether the owner accepts Pix, card, boleto, or transfer.</div>
+          </article>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q2">Can I use Uber, 99, 99Moto, bus, or metro?</button>
+            <div hidden data-i18n="faq.a2">Yes. Uber and 99 are practical for airports, beach trips, nightlife, and first arrivals. 99Moto or moto rides can be faster in traffic but are not ideal for everyone. Bus and metro can save money when the route is direct. For Barra, Campo Grande, family trips, or late nights, a car or private driver may be better.</div>
+          </article>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q3">Which neighborhoods should I compare?</button>
+            <div hidden data-i18n="faq.a3">For Rio, compare Penha for local value, Campo Grande for space and family routines, Tijuca for metro access, Botafogo for tourists, Barra for longer stays, and Ipanema or Leblon for premium beach life. In São Paulo, compare Jardins, Moema, Pinheiros, Vila Mariana, and Bela Vista.</div>
+          </article>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q4">Is Pix, card, PayPal, Stripe, Apple Pay, or boleto better for payment?</button>
+            <div hidden data-i18n="faq.a4">Pix is fast and common in Brazil, card is useful for platform bookings, PayPal can help some international clients, and Stripe can support card, Apple Pay, and Google Pay style checkout when connected. Boleto appears in formal rental or service payments. Always confirm the recipient, receipt, deposit rules, and refund terms in writing.</div>
+          </article>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q5">Can James help with Airbnb-style stays and other rental sites?</button>
+            <div hidden data-i18n="faq.a5">Yes. James can help compare Airbnb, QuintoAndar, ZAP Imóveis, Imobiliária Sinai, and direct rental options. Send the link, dates, budget, number of guests, and preferred area so the listing can be reviewed more carefully.</div>
+          </article>
+          <article>
+            <button type="button" aria-expanded="false" data-i18n="faq.q6">How do I contact James quickly?</button>
+            <div hidden data-i18n="faq.a6">The fastest option is WhatsApp: +55 44 99884-3639. You can also use Instagram @jameslennan. Send your city, dates, budget, guests, preferred payment method, and whether you need transport or tour help.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- SAO PAULO AND RIO STAY COLLECTION -->
+    <!-- Airbnb-style short stay highlights -->
+    <!-- ===================================== -->
+    <section class="section stay-collection" id="stays" aria-labelledby="stays-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow">Brazil stays</p>
+        <h2 id="stays-title">São Paulo and Rio homes ready for short stays.</h2>
+        <p>Curated furnished homes with hospitality-style details for tourists, relocating clients, and families testing a neighborhood before buying.</p>
+      </div>
+      <div class="container stay-grid">
+        <article class="stay-card reveal">
+          <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&w=1000&q=85" alt="Realistic furnished city apartment for a São Paulo stay" loading="lazy">
+          <div>
+            <span>São Paulo</span>
+            <h3>Jardins Design Apartment</h3>
+            <p>Walkable dining, weekly cleaning, workspace, 24-hour building security.</p>
+            <strong>From R$780/night</strong>
+          </div>
+        </article>
+        <article class="stay-card reveal">
+          <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1000&q=85" alt="Realistic bedroom in a furnished São Paulo apartment" loading="lazy">
+          <div>
+            <span>São Paulo</span>
+            <h3>Vila Mariana Family Flat</h3>
+            <p>Two bedrooms, parking, metro access, family-friendly layout near parks.</p>
+            <strong>From R$520/night</strong>
+          </div>
+        </article>
+        <article class="stay-card reveal">
+          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1000&q=85" alt="Rio de Janeiro beach neighborhood near short stay apartments" loading="lazy">
+          <div>
+            <span>Rio de Janeiro</span>
+            <h3>Ipanema Beach Studio</h3>
+            <p>Steps from the beach, concierge check-in, fast Wi-Fi, tourist route planning.</p>
+            <strong>From R$690/night</strong>
+          </div>
+        </article>
+        <article class="stay-card reveal">
+          <img src="https://images.unsplash.com/photo-1544989164-31dc3c645987?auto=format&fit=crop&w=1000&q=85" alt="Realistic furnished apartment for a Rio de Janeiro short stay" loading="lazy">
+          <div>
+            <span>Rio de Janeiro</span>
+            <h3>Barra Terrace Residence</h3>
+            <p>Ocean-facing terrace, pool access, private driver option, ideal for groups.</p>
+            <strong>From R$1,250/night</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- CONTACT SECTION -->
+    <!-- Forms, office information, map -->
+    <!-- ===================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__layout">
+        <div class="contact__info reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Private consultation</p>
+          <h2 id="contact-title" data-i18n="contact.title">Start with a confidential conversation.</h2>
+          <p data-i18n="contact.copy">Tell us what you are considering. This form opens WhatsApp with your message ready to send directly to James. We can assist clients in English, Portuguese, and Spanish.</p>
+          <address>
+            Rua Douton Nikton Silva, São Paulo, SP<br>
+            CEP 03564-020<br>
+            WhatsApp: +55 44 99884-3639<br>
+            Instagram: @jameslennan<br>
+            Facebook: James Lennan
+          </address>
+          <p><strong>Business Hours</strong><br>Monday-Friday, 8:00 AM-7:00 PM</p>
+          <p><strong>Brazil Desk</strong><br>Rio de Janeiro advisory by appointment<br>WhatsApp-ready consultations for travelers and relocating clients.</p>
+          <p><strong>Languages</strong><br>English, Portuguese, and Spanish support for buyers, renters, tourists, and relocating clients.</p>
+          <div class="contact-links" aria-label="Direct contact links">
+            <a class="button button--gold" href="https://wa.me/5544998843639" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="button button--outline" href="https://www.instagram.com/jameslennan" target="_blank" rel="noopener">Instagram</a>
+            <a class="button button--outline" href="https://www.facebook.com/search/top?q=james%20lennan" target="_blank" rel="noopener">Facebook</a>
+          </div>
+          <iframe title="Map showing São Paulo office location" loading="lazy" src="https://www.google.com/maps?q=Rua%20Douton%20Nikton%20Silva%20S%C3%A3o%20Paulo%2003564-020&output=embed"></iframe>
+        </div>
+        <form class="contact-form glass reveal" data-contact-form novalidate>
+          <label><span data-i18n="contact.name">Name</span><input name="name" type="text" autocomplete="name" required></label>
+          <label><span data-i18n="contact.email">Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span data-i18n="contact.interest">Interest</span><select name="interest" required><option value="" data-i18n="contact.select">Select one</option><option data-i18n="contact.buying">Buying</option><option data-i18n="contact.selling">Selling</option><option data-i18n="contact.investment">Investment</option><option data-i18n="contact.rental">Rental</option><option data-i18n="contact.rio">Rio de Janeiro Travel</option><option data-i18n="contact.relocation">Brazil Relocation</option></select></label>
+          <label><span data-i18n="contact.payment">Payment preference</span><select name="payment"><option value="" data-i18n="contact.paymentSelect">Select payment type</option><option>Pix</option><option data-i18n="contact.card">Credit / debit card</option><option>PayPal</option><option>Stripe</option><option>Apple Pay</option><option>Google Pay</option><option>Boleto</option><option data-i18n="contact.transfer">Bank or international transfer</option></select></label>
+          <label><span data-i18n="contact.message">Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button class="button button--gold button--wide" type="submit" data-i18n="contact.submit">Send via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- NEWSLETTER SECTION -->
+    <!-- Email capture and validation -->
+    <!-- ===================================== -->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter__inner reveal">
+        <div>
+          <p class="eyebrow">Private market brief</p>
+          <h2 id="newsletter-title">Receive monthly luxury intelligence.</h2>
+        </div>
+        <form class="newsletter__form" data-newsletter-form novalidate>
+          <label class="sr-only" for="newsletter-email">Email address</label>
+          <input id="newsletter-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+          <button class="button button--gold" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- MOBILE APP INSTALL PREVIEW -->
+    <!-- Android and iOS home screen guidance -->
+    <!-- ===================================== -->
+    <section class="section mobile-install" id="mobile-install" aria-labelledby="mobile-install-title">
+      <div class="container mobile-install__layout">
+        <div class="mobile-install__copy reveal">
+          <p class="eyebrow" data-i18n="install.eyebrow">Mobile app feel</p>
+          <h2 id="mobile-install-title" data-i18n="install.title">Show clients what the saved mobile version looks like.</h2>
+          <p data-i18n="install.copy">When a client adds the site to their phone, it opens like a lightweight James Lennan Estates app with rentals, transport, Pix, tours, WhatsApp, and the AI guide close at hand.</p>
+          <div class="mobile-install__steps">
+            <span data-i18n="install.android">Android: Chrome menu > Add to Home screen</span>
+            <span data-i18n="install.ios">iPhone: Safari Share > Add to Home Screen</span>
+          </div>
+        </div>
+        <figure class="phone-preview reveal" aria-label="Photo mockup of the saved mobile app">
+          <img src="assets/images/james-lennan-mobile-app-mockup.png" alt="Hand holding a phone with the James Lennan Estates mobile app preview">
+          <figcaption>
+            <strong data-i18n="install.homeTitle">Home screen ready</strong>
+            <span data-i18n="install.homeCopy">One tap opens the mobile site like a private client app.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================== -->
+  <!-- PREMIUM FOOTER -->
+  <!-- Links, legal, social, copyright -->
+  <!-- ===================================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><a class="brand" href="#hero"><span class="brand__mark">JL</span><span>James Lennan Estates</span></a><p>Brazil real estate, rentals, short stays, and travel guidance built by James Lennan.</p><p>WhatsApp: +55 44 99884-3639</p></div>
+      <div><h3>Company</h3><a href="#about"><strong>About</strong><span>Private advisory story, mission, and achievements.</span></a><a href="#developer"><strong>Developer</strong><span>Created by James Lennan, frontend developer and product designer.</span></a><a href="#insights"><strong>Insights</strong><span>Luxury trends, Rio short-stay demand, and investment notes.</span></a></div>
+      <div><h3>Legal</h3><a href="#privacy"><strong>Privacy</strong><span>Client inquiries are handled confidentially and never sold.</span></a><a href="#terms"><strong>Terms</strong><span>Listings, prices, and availability are subject to confirmation.</span></a><a href="#fair-housing"><strong>Fair Housing</strong><span>Equal service for every client, renter, buyer, and guest.</span></a></div>
+      <div><h3>Social</h3><a href="https://www.instagram.com/jameslennan" target="_blank" rel="noopener">Instagram: James Lennan</a><a href="https://wa.me/5544998843639" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.facebook.com/search/top?q=james%20lennan" target="_blank" rel="noopener">Facebook: James Lennan</a></div>
+    </div>
+    <div class="container legal-notes">
+      <article id="privacy">
+        <h3>Privacy</h3>
+        <p>Contact details are used only to answer inquiries, schedule visits, send requested market information, and coordinate property or tour support.</p>
+      </article>
+      <article id="terms">
+        <h3>Terms</h3>
+        <p>Images, prices, nightly rates, monthly rents, availability, and property features are presentation examples and should be verified before any booking or transaction.</p>
+      </article>
+      <article id="fair-housing">
+        <h3>Fair Housing</h3>
+        <p>James Lennan Estates welcomes all clients and supports equal housing opportunity across buying, selling, renting, relocation, and tourist-stay services.</p>
+      </article>
+    </div>
+    <div class="container footer__bottom">© 2026 James Lennan Estates. All rights reserved.</div>
+  </footer>
+
+  <!-- ===================================== -->
+  <!-- JAMES LENNAN AI CHATBOX -->
+  <!-- Fast local guidance for property and Rio requests -->
+  <!-- ===================================== -->
+  <aside class="ai-chat" data-ai-chat aria-label="James Lennan AI real estate assistant" aria-live="polite">
+    <button class="ai-chat__toggle" type="button" data-chat-toggle aria-expanded="false" aria-controls="ai-chat-panel">
+      <img src="assets/images/james-lennan-profile-portrait.jpeg" alt="" aria-hidden="true">
+      <strong>James Lennan AI</strong>
+    </button>
+    <section class="ai-chat__panel glass" id="ai-chat-panel" hidden>
+      <header>
+        <div>
+          <p class="eyebrow" data-i18n="chat.eyebrow">James Lennan AI</p>
+          <h2 data-i18n="chat.title">Ask James about homes, Rio rentals, or tours.</h2>
+        </div>
+        <button type="button" data-chat-close aria-label="Close James Lennan AI">×</button>
+      </header>
+      <label class="ai-chat__language">
+        <span data-i18n="chat.language">Language</span>
+        <select data-chat-language>
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+      <div class="ai-chat__messages" data-chat-messages role="log" aria-live="polite"></div>
+      <div class="ai-chat__quick" aria-label="Suggested questions">
+        <button type="button" data-chat-prompt="I need a rental in Rio with transport and Pix payment options." data-i18n="chat.promptRental">Rio rental plan</button>
+        <button type="button" data-chat-prompt="Compare Penha, Campo Grande, Barra, Botafogo, Ipanema, and Leblon." data-i18n="chat.promptNeighborhoods">Compare neighborhoods</button>
+        <button type="button" data-chat-prompt="Plan a 3 day Rio tour with Uber, 99, and private driver options." data-i18n="chat.promptTransport">Tour + transport</button>
+        <button type="button" data-chat-prompt="What should I check before paying by Pix, card, or boleto?" data-i18n="chat.promptPayment">Payment safety</button>
+      </div>
+      <form class="ai-chat__form" data-chat-form>
+        <label class="sr-only" for="ai-chat-input">Ask James Lennan AI</label>
+        <textarea id="ai-chat-input" name="message" rows="2" placeholder="Ask James about rentals, Airbnb, Pix, Uber, Penha, Campo Grande..." data-i18n-placeholder="chat.placeholder" autocomplete="off" required></textarea>
+        <button class="button button--gold" type="submit" data-i18n="chat.send">Send</button>
+      </form>
+    </section>
+  </aside>
+  <a class="floating-contact" href="https://wa.me/5544998843639" target="_blank" rel="noopener" aria-label="Open WhatsApp">☎</a>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">↑</button>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="showcase-modal" aria-labelledby="modal-title">
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close modal">×</button>
+      <h2 id="modal-title">The Aurelia Residence Gallery</h2>
+      <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85" alt="Luxury living room with ocean view" loading="lazy">
+      <p>Private showings and live virtual tours are available by qualification.</p>
+    </div>
+  </dialog>
+</body>
+</html>
