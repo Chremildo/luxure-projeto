@@ -26,6 +26,11 @@ const content = {
         body: "In Brazil, common payment options include Pix, credit or debit card, boleto, bank transfer, and sometimes PayPal or Stripe checkout. Stripe can support card, Apple Pay, and Google Pay style payments when it is connected by the business. Pix is fast for local transfers, PayPal can help some international clients, and boleto appears in formal services. Always confirm deposit, cancellation, cleaning fee, contract, receipt, and ID requirements before payment.",
         checklist: ["Never pay before confirming who receives the money", "Ask for receipt or booking confirmation", "Confirm refund rules in writing", "Confirm if PayPal or Stripe fees apply", "Be careful with prices that look too low"]
       },
+      cyber: {
+        title: "Cybersecurity defense before booking",
+        body: "For safe rentals and payments, treat every link, document request, and payment instruction as something to verify. Check the sender, domain, profile history, phone number, payment recipient, and whether the property photos appear copied. James can help review red flags before a client sends Pix, card details, documents, or a deposit.",
+        checklist: ["Use two-factor authentication on email and booking accounts", "Do not send IDs through random links", "Confirm payment recipient on a separate channel", "Avoid urgent pressure to pay immediately", "Ask James to review suspicious listings or links"]
+      },
       tourism: {
         title: "Rio tourist planning",
         body: "A good Rio plan should balance famous attractions with easy logistics. For a 3-day visit, one day can cover Christ the Redeemer, Santa Teresa, and dinner. Another day can focus on Ipanema or Leblon beach plus Sugarloaf at sunset. A third day can include Botanical Garden, museums, galleries, or a boat day if weather is good. For families, add more transport time and avoid overpacking the schedule.",
@@ -64,6 +69,11 @@ const content = {
         title: "Pagamentos e segurança",
         body: "No Brasil, opções comuns são Pix, cartão de crédito ou débito, boleto, transferência bancária e, em alguns casos, PayPal ou checkout Stripe. Stripe pode aceitar cartão, Apple Pay e Google Pay quando estiver conectado ao negócio. Pix é rápido para transferências locais, PayPal pode ajudar clientes internacionais e boleto aparece em serviços formais. Sempre confirme caução, cancelamento, limpeza, contrato, recibo e documentos antes de pagar.",
         checklist: ["Nunca pague antes de confirmar quem recebe", "Peça recibo ou confirmação da reserva", "Confirme reembolso por escrito", "Confirme se PayPal ou Stripe têm taxas", "Desconfie de preço muito baixo"]
+      },
+      cyber: {
+        title: "Defesa cibernética antes da reserva",
+        body: "Para aluguel e pagamento seguro, trate cada link, pedido de documento e instrução de pagamento como algo que precisa ser verificado. Confira remetente, domínio, histórico do perfil, telefone, recebedor do pagamento e se as fotos parecem copiadas. James pode ajudar a revisar sinais de golpe antes de Pix, cartão, documentos ou caução.",
+        checklist: ["Use autenticação em duas etapas no email e contas de reserva", "Não envie documentos por links aleatórios", "Confirme o recebedor em outro canal", "Evite pressão para pagar imediatamente", "Peça ao James para revisar anúncios ou links suspeitos"]
       },
       tourism: {
         title: "Planejamento turístico no Rio",
@@ -104,6 +114,11 @@ const content = {
         body: "En Brasil, las opciones comunes son Pix, tarjeta de crédito o débito, boleto, transferencia bancaria y, en algunos casos, PayPal o checkout Stripe. Stripe puede aceptar tarjeta, Apple Pay y Google Pay cuando esté conectado al negocio. Pix es rápido para transferencias locales, PayPal puede ayudar a clientes internacionales y boleto aparece en servicios formales. Confirma depósito, cancelación, limpieza, contrato, recibo y documentos antes de pagar.",
         checklist: ["Nunca pagues antes de confirmar quién recibe", "Pide recibo o confirmación de reserva", "Confirma reembolso por escrito", "Confirma si PayPal o Stripe tienen tarifas", "Desconfía de precios demasiado bajos"]
       },
+      cyber: {
+        title: "Defensa de ciberseguridad antes de reservar",
+        body: "Para alquileres y pagos seguros, trata cada link, pedido de documento e instrucción de pago como algo que debe verificarse. Revisa remitente, dominio, historial del perfil, teléfono, receptor del pago y si las fotos parecen copiadas. James puede ayudar a revisar señales de estafa antes de Pix, tarjeta, documentos o depósito.",
+        checklist: ["Usa autenticación de dos factores en email y cuentas de reserva", "No envíes documentos por links aleatorios", "Confirma el receptor por otro canal", "Evita presión para pagar inmediatamente", "Pide a James que revise anuncios o links sospechosos"]
+      },
       tourism: {
         title: "Plan turístico en Río",
         body: "Un buen plan en Río debe equilibrar atracciones famosas y logística simple. En 3 días, un día puede tener Cristo Redentor, Santa Teresa y cena. Otro día puede ser playa en Ipanema o Leblon y Pan de Azúcar al atardecer. El tercero puede incluir Jardín Botánico, museos, galerías o paseo en barco si el clima ayuda. Para familias, deja más tiempo de transporte y evita una agenda demasiado llena.",
@@ -123,6 +138,7 @@ const intentKeywords = {
   neighborhoods: ["penha", "campo grande", "tijuca", "botafogo", "barra", "ipanema", "leblon", "jardins", "moema", "pinheiros", "vila mariana", "bairro", "neighborhood", "barrio"],
   transport: ["uber", "99", "bus", "metro", "moto", "car", "ride", "transport", "ônibus", "onibus", "metrô", "carro", "transporte", "coche"],
   payments: ["pix", "card", "boleto", "payment", "pay", "deposit", "paypal", "stripe", "apple pay", "google pay", "cartão", "cartao", "pagamento", "pagar", "depósito", "deposito", "tarjeta", "pago"],
+  cyber: ["cyber", "security", "secure", "scam", "fraud", "hack", "phishing", "defense", "safe link", "ciber", "segurança", "seguranca", "golpe", "fraude", "seguro", "estafa", "ciberseguridad"],
   tourism: ["tour", "tourist", "travel", "trip", "itinerary", "cristo", "sugarloaf", "passeio", "turismo", "viagem", "roteiro", "viaje"],
   contact: ["contact", "whatsapp", "instagram", "phone", "call", "james", "contato", "telefone", "ligar", "llamar"]
 };

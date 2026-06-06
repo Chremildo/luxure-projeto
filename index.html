@@ -47,6 +47,8 @@
         <a href="#showcase" data-i18n="nav.showcase">Showcase</a>
         <a href="#developer" data-i18n="nav.developer">Developer</a>
         <a href="#brazil" data-i18n="nav.brazil">Brazil</a>
+        <a href="#cyber-defense" data-i18n="nav.cyber">Cyber Defense</a>
+        <a href="#client-portal" data-i18n="nav.portal">Client Login</a>
         <a href="#local-guide" data-i18n="nav.guide">Guide</a>
         <a href="#insights" data-i18n="nav.insights">Insights</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -332,6 +334,31 @@
         <article class="service-card reveal"><span>04</span><h3>Rentals</h3><p>Fully vetted residences for seasonal and long-term occupancy.</p></article>
         <article class="service-card reveal"><span>05</span><h3>Management</h3><p>Stewardship, staffing, maintenance, and owner reporting.</p></article>
         <article class="service-card reveal"><span>06</span><h3>Rio Concierge</h3><p>Rental guidance, neighborhood matching, and curated tourist experiences in Rio de Janeiro.</p></article>
+        <article class="service-card reveal"><span>07</span><h3>Cyber Defense</h3><p>Ethical cybersecurity checks for client privacy, safe payment habits, and secure digital workflows.</p></article>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- CYBERSECURITY DEFENSE -->
+    <!-- Ethical cyber services and safety checks -->
+    <!-- ===================================== -->
+    <section class="section cyber-defense" id="cyber-defense" aria-labelledby="cyber-title">
+      <div class="container cyber-defense__layout">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="cyber.eyebrow">Ethical cyber defense</p>
+          <h2 id="cyber-title" data-i18n="cyber.title">Real estate, travel, and payments protected by security thinking.</h2>
+          <p data-i18n="cyber.copy">James Lennan also works with ethical cybersecurity, helping clients think clearly about safe links, identity checks, payment confirmation, account protection, and scam prevention before they rent, travel, or pay online.</p>
+          <div class="developer__actions">
+            <a class="button button--gold" href="https://wa.me/5544998843639?text=Hi%20James%2C%20I%20want%20cybersecurity%20defense%20support%20for%20a%20property%20or%20payment%20question." target="_blank" rel="noopener" data-i18n="cyber.whatsapp">Ask on WhatsApp</a>
+            <button class="button button--outline" type="button" data-chat-prompt="I need cybersecurity defense advice before paying for a rental online." data-i18n="cyber.ai">Ask James AI</button>
+          </div>
+        </div>
+        <div class="cyber-defense__grid reveal" aria-label="Cybersecurity defense services">
+          <article><strong data-i18n="cyber.oneTitle">Payment Safety</strong><span data-i18n="cyber.oneCopy">Pix, card, boleto, PayPal, and Stripe link checks before money moves.</span></article>
+          <article><strong data-i18n="cyber.twoTitle">Client Privacy</strong><span data-i18n="cyber.twoCopy">Practical guidance for IDs, documents, phone numbers, and booking conversations.</span></article>
+          <article><strong data-i18n="cyber.threeTitle">Scam Defense</strong><span data-i18n="cyber.threeCopy">Red-flag review for fake listings, copied photos, pressure tactics, and unsafe links.</span></article>
+          <article><strong data-i18n="cyber.fourTitle">Account Hygiene</strong><span data-i18n="cyber.fourCopy">Password, two-factor authentication, and safe communication habits for clients.</span></article>
+        </div>
       </div>
     </section>
 
@@ -598,6 +625,51 @@
     </section>
 
     <!-- ===================================== -->
+    <!-- CLIENT PORTAL AND ADMIN DASHBOARD DEMO -->
+    <!-- Static local login experience -->
+    <!-- ===================================== -->
+    <section class="section client-portal" id="client-portal" aria-labelledby="portal-title">
+      <div class="container section__header reveal">
+        <p class="eyebrow" data-i18n="portal.eyebrow">Client login</p>
+        <h2 id="portal-title" data-i18n="portal.title">Private client options after login.</h2>
+        <p data-i18n="portal.copy">This is a front-end demo portal for the portfolio site. A production login, admin dashboard, and live payments require a secure backend and verified payment provider.</p>
+      </div>
+      <div class="container portal-shell reveal" data-portal>
+        <form class="portal-login glass" data-login-form>
+          <h3 data-i18n="portal.loginTitle">Client or admin access</h3>
+          <label><span data-i18n="portal.email">Email</span><input name="email" type="email" value="client@example.com" autocomplete="email" required></label>
+          <label><span data-i18n="portal.password">Password</span><input name="password" type="password" value="client123" autocomplete="current-password" required></label>
+          <button class="button button--gold button--wide" type="submit" data-i18n="portal.loginButton">Enter dashboard</button>
+          <p class="portal-login__hint" data-i18n="portal.hint">Demo: client@example.com / client123 or admin@jameslennan.com / admin123</p>
+        </form>
+        <div class="portal-dashboard glass" data-dashboard hidden>
+          <div class="portal-dashboard__head">
+            <div>
+              <p class="eyebrow" data-i18n="portal.dashboardEyebrow">Dashboard</p>
+              <h3 data-dashboard-title>Client dashboard</h3>
+            </div>
+            <button class="button button--outline" type="button" data-logout data-i18n="portal.logout">Logout</button>
+          </div>
+          <div class="portal-actions">
+            <a href="https://wa.me/5544998843639?text=Hi%20James%2C%20I%20want%20to%20confirm%20my%20rental%20payment%20options." target="_blank" rel="noopener"><strong>Pix / card request</strong><span>Open WhatsApp with payment details.</span></a>
+            <a href="https://www.paypal.com/" target="_blank" rel="noopener"><strong>PayPal</strong><span>Open PayPal for international clients.</span></a>
+            <a href="https://stripe.com/payments" target="_blank" rel="noopener"><strong>Stripe</strong><span>Payment provider connection for production.</span></a>
+            <a href="#properties"><strong>Saved homes</strong><span>Review listings and open galleries.</span></a>
+          </div>
+          <div class="admin-panel" data-admin-panel hidden>
+            <h4 data-i18n="portal.adminTitle">Administration dashboard</h4>
+            <div class="admin-panel__grid">
+              <article><strong>12</strong><span>New inquiries</span></article>
+              <article><strong>5</strong><span>Payment requests</span></article>
+              <article><strong>8</strong><span>Gallery views</span></article>
+              <article><strong>3</strong><span>Cyber reviews</span></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
     <!-- CONTACT SECTION -->
     <!-- Forms, office information, map -->
     <!-- ===================================== -->
@@ -627,7 +699,7 @@
         <form class="contact-form glass reveal" data-contact-form novalidate>
           <label><span data-i18n="contact.name">Name</span><input name="name" type="text" autocomplete="name" required></label>
           <label><span data-i18n="contact.email">Email</span><input name="email" type="email" autocomplete="email" required></label>
-          <label><span data-i18n="contact.interest">Interest</span><select name="interest" required><option value="" data-i18n="contact.select">Select one</option><option data-i18n="contact.buying">Buying</option><option data-i18n="contact.selling">Selling</option><option data-i18n="contact.investment">Investment</option><option data-i18n="contact.rental">Rental</option><option data-i18n="contact.rio">Rio de Janeiro Travel</option><option data-i18n="contact.relocation">Brazil Relocation</option></select></label>
+          <label><span data-i18n="contact.interest">Interest</span><select name="interest" required><option value="" data-i18n="contact.select">Select one</option><option data-i18n="contact.buying">Buying</option><option data-i18n="contact.selling">Selling</option><option data-i18n="contact.investment">Investment</option><option data-i18n="contact.rental">Rental</option><option data-i18n="contact.rio">Rio de Janeiro Travel</option><option data-i18n="contact.relocation">Brazil Relocation</option><option data-i18n="contact.cyber">Cybersecurity Defense</option></select></label>
           <label><span data-i18n="contact.payment">Payment preference</span><select name="payment"><option value="" data-i18n="contact.paymentSelect">Select payment type</option><option>Pix</option><option data-i18n="contact.card">Credit / debit card</option><option>PayPal</option><option>Stripe</option><option>Apple Pay</option><option>Google Pay</option><option>Boleto</option><option data-i18n="contact.transfer">Bank or international transfer</option></select></label>
           <label><span data-i18n="contact.message">Message</span><textarea name="message" rows="5" required></textarea></label>
           <button class="button button--gold button--wide" type="submit" data-i18n="contact.submit">Send via WhatsApp</button>
@@ -746,7 +818,7 @@
       </form>
     </section>
   </aside>
-  <a class="floating-contact" href="https://wa.me/5544998843639" target="_blank" rel="noopener" aria-label="Open WhatsApp">☎</a>
+  <a class="floating-contact floating-contact--whatsapp" href="https://wa.me/5544998843639" target="_blank" rel="noopener" aria-label="Open WhatsApp">WA</a>
   <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">↑</button>
   <div class="toast" data-toast role="status" aria-live="polite"></div>
 
@@ -756,6 +828,15 @@
       <h2 id="modal-title">The Aurelia Residence Gallery</h2>
       <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85" alt="Luxury living room with ocean view" loading="lazy">
       <p>Private showings and live virtual tours are available by qualification.</p>
+    </div>
+  </dialog>
+  <dialog class="modal" id="property-gallery-modal" aria-labelledby="property-gallery-title">
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close property gallery">×</button>
+      <h2 id="property-gallery-title" data-gallery-title>Property Gallery</h2>
+      <p data-gallery-meta></p>
+      <div class="modal-gallery" data-gallery-images></div>
+      <p>Use WhatsApp to ask James for recent photos, video walkthroughs, availability, payment details, and booking conditions before paying.</p>
     </div>
   </dialog>
 </body>

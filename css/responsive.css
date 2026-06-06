@@ -15,7 +15,7 @@ RESPONSIVE SYSTEM
   }
   .nav__menu.is-open { display: grid; }
   .nav__actions .button { display: none; }
-  .hero__content, .showcase__layout, .about__layout, .developer__layout, .brazil__layout, .insights__layout, .faq__layout, .contact__layout, .mobile-install__layout { grid-template-columns: 1fr; }
+  .hero__content, .showcase__layout, .about__layout, .developer__layout, .brazil__layout, .cyber-defense__layout, .insights__layout, .faq__layout, .contact__layout, .mobile-install__layout, .portal-shell { grid-template-columns: 1fr; }
   .hero__stats, .trust__grid, .property-grid, .agent-grid { grid-template-columns: repeat(2, 1fr); }
   .service-grid, .stay-grid, .guide-grid, .legal-notes { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
@@ -30,7 +30,7 @@ RESPONSIVE SYSTEM
   .hero { padding-top: 100px; }
   .hero__content { gap: 28px; }
   .hero__buttons, .showcase__actions, .developer__actions, .brazil__actions, .newsletter__inner, .newsletter__form { flex-direction: column; align-items: stretch; }
-  .hero__stats, .trust__grid, .property-grid, .agent-grid, .service-grid, .stay-grid, .guide-grid, .details-list, .mission-grid, .rio-grid, .footer__grid, .legal-notes { grid-template-columns: 1fr; }
+  .hero__stats, .trust__grid, .property-grid, .agent-grid, .service-grid, .stay-grid, .guide-grid, .details-list, .mission-grid, .rio-grid, .cyber-defense__grid, .portal-actions, .admin-panel__grid, .modal-gallery, .footer__grid, .legal-notes { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
   .process-grid article { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }
   .hero__stats div { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 0; }

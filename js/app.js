@@ -5,6 +5,7 @@ import { initTheme } from "./theme.js";
 import { initForms } from "./forms.js";
 import { initChatbot } from "./chatbot.js";
 import { initTranslations } from "./translations.js";
+import { initPortal } from "./portal.js";
 
 // =======================================
 // APPLICATION BOOTSTRAP
@@ -20,6 +21,7 @@ const initApp = () => {
   initForms();
   initTranslations();
   initChatbot();
+  initPortal();
   initNavigation();
   initScrollReveal();
   initCounters();

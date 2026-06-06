@@ -89,6 +89,17 @@ PROPERTY CARDS AND FILTERS
 .property-card__meta { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 0.86rem; }
 .property-card h3 { margin: 8px 0 6px; font-size: 1.12rem; }
 .property-card__price { color: var(--gold); font-size: 1.35rem; font-weight: 900; }
+.property-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.property-card__actions .button {
+  min-height: 40px;
+  padding: 9px 10px;
+  font-size: 0.82rem;
+}
 .property-card__highlight {
   min-height: 44px;
   margin: 10px 0;
@@ -185,6 +196,18 @@ ACCORDION, MODAL, FLOATING UI
 .modal__content { padding: 24px; }
 .modal__content img { width: 100%; max-height: 520px; object-fit: cover; margin: 16px 0; }
 .modal__close { float: right; border: 0; background: transparent; color: var(--ink); font-size: 2rem; }
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.modal-gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin: 0;
+}
 .toast {
   position: fixed;
   right: 18px;
@@ -208,6 +231,16 @@ ACCORDION, MODAL, FLOATING UI
   pointer-events: none;
 }
 .floating-contact { bottom: 92px; opacity: 1; pointer-events: auto; background: var(--gold); color: #0a0a0a; }
+.floating-contact--whatsapp {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #062912;
+  font-size: 0.84rem;
+  font-weight: 1000;
+  box-shadow: var(--shadow);
+}
 .back-to-top { bottom: 144px; }
 .back-to-top.is-visible { opacity: 1; pointer-events: auto; }
 .loader {
@@ -257,6 +290,75 @@ SHORT-STAY CARDS
   min-height: 72px;
 }
 .stay-card strong { color: var(--gold); }
+
+/* =======================================
+CYBER DEFENSE AND PORTAL
+======================================= */
+.cyber-defense__layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: center;
+}
+.cyber-defense__grid,
+.portal-actions,
+.admin-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.cyber-defense__grid article,
+.portal-actions a,
+.admin-panel__grid article {
+  border: 1px solid var(--line);
+  background: var(--charcoal);
+  padding: 18px;
+}
+.cyber-defense__grid strong,
+.portal-actions strong,
+.admin-panel__grid strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.cyber-defense__grid span,
+.portal-actions span,
+.admin-panel__grid span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.portal-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) 1.3fr;
+  gap: 22px;
+}
+.portal-login,
+.portal-dashboard {
+  padding: 24px;
+}
+.portal-login h3,
+.portal-dashboard h3,
+.admin-panel h4 {
+  margin: 0 0 16px;
+}
+.portal-login__hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.portal-dashboard__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.admin-panel {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
 
 /* =======================================
 LOCAL GUIDE CARDS

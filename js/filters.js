@@ -217,6 +217,18 @@ const properties = [
   }
 ];
 
+const fallbackGallery = [
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1400&q=85"
+];
+
+const galleryFor = (property) => [
+  property.image,
+  ...(property.gallery || fallbackGallery.filter((image) => image !== property.image).slice(0, 3))
+];
+
 // =======================================
 // PROPERTY FILTER SYSTEM
 // Handles dynamic filtering and search
@@ -229,7 +241,7 @@ export const initFilters = () => {
 
   const render = (items) => {
     grid.innerHTML = items.map((property) => `
-      <article class="property-card reveal is-visible" data-categories="${property.category.join(" ")}">
+      <article class="property-card reveal is-visible" data-categories="${property.category.join(" ")}" data-property-title="${property.title}">
         <div class="property-card__image">
           <img src="${property.image}" alt="${property.title} in ${property.location}" loading="lazy">
         </div>
@@ -247,6 +259,10 @@ export const initFilters = () => {
             ${property.guests ? `<span>${property.guests} guests</span>` : ""}
             ${property.nightly ? `<span>${property.nightly}</span>` : ""}
             ${property.category.includes("brazil") ? "<span>Brazil Desk</span>" : ""}
+          </div>
+          <div class="property-card__actions">
+            <button class="button button--outline" type="button" data-view-gallery="${property.title}">View gallery</button>
+            <a class="button button--gold" href="https://wa.me/5544998843639?text=${encodeURIComponent(`Hi James, I want payment and booking options for ${property.title} in ${property.location}.`)}" target="_blank" rel="noopener">Request payment</a>
           </div>
         </div>
       </article>
@@ -278,9 +294,29 @@ export const initFilters = () => {
 
   grid.addEventListener("click", (event) => {
     const saveButton = event.target.closest("[data-save-property]");
-    if (!saveButton) return;
-    saveButton.classList.toggle("is-saved");
-    saveButton.textContent = saveButton.classList.contains("is-saved") ? "♥" : "♡";
+    const galleryButton = event.target.closest("[data-view-gallery]");
+
+    if (saveButton) {
+      saveButton.classList.toggle("is-saved");
+      saveButton.textContent = saveButton.classList.contains("is-saved") ? "♥" : "♡";
+      return;
+    }
+
+    if (galleryButton) {
+      const property = properties.find((item) => item.title === galleryButton.dataset.viewGallery);
+      const dialog = document.querySelector("#property-gallery-modal");
+      const title = dialog?.querySelector("[data-gallery-title]");
+      const meta = dialog?.querySelector("[data-gallery-meta]");
+      const gallery = dialog?.querySelector("[data-gallery-images]");
+      if (!property || !dialog || !title || !meta || !gallery) return;
+
+      title.textContent = property.title;
+      meta.textContent = `${property.location} · ${property.label} · ${property.beds || "Studio"} bd · ${property.baths} ba`;
+      gallery.innerHTML = galleryFor(property).map((image, index) => `
+        <img src="${image}" alt="${property.title} gallery photo ${index + 1}" loading="lazy">
+      `).join("");
+      dialog.showModal();
+    }
   });
 
   searchForm?.addEventListener("submit", (event) => {
